@@ -1,0 +1,35 @@
+<svg
+  viewBox="-0.5 -0.5 16 16"
+  xmlns="http://www.w3.org/2000/svg"
+  height="16"
+  width="16"
+>
+  <!-- Fond blanc -->
+  <rect
+    x="-0.5"
+    y="-0.5"
+    width="16"
+    height="16"
+    fill="#ffffff"
+  />
+
+  <!-- Nervure de la feuille -->
+  <path
+    d="M3.0474375 14.2635625s0.3909375-3.5185625 3.127625-6.6461875"
+    fill="none"
+    stroke="#18352f"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="1"
+  />
+
+  <!-- Contour de la feuille -->
+  <path
+    d="m12.5316875 1.160625 0.4649375 4.8278125c0.2925 3.0384375-1.9855625 5.7438125-5.0240625 6.0363125-2.9813125 0.287125-5.6820625-1.892125-5.969125-4.8734375-0.2870625-2.9813125 1.8970625-5.630875 4.878375-5.9179375l5.138-0.49475c0.2578125-0.024875 0.487125 0.164125 0.511875 0.422Z"
+    fill="#ffffff"
+    stroke="#18352f"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="1"
+  />
+</svg>

@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Découvrez la collection de bols artisanaux Atelier Terres Claires, façonnés à la main en France."
+    />
+    <title>Nos bols | Atelier Terres Claires</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+    <header class="site-header">
+      <!-- ===================================================
+           PARTIE SUPÉRIEURE HEADER
+      ==================================================== -->
+      <div class="header-top">
+        <!-- Logo -->
+        <a
+          href="index.html"
+          class="header-logo"
+          aria-label="Retour à l'accueil - Atelier Terres Claires"
+        >
+          <img
+            src="images/logo-detoure.png"
+            alt="Atelier Terres Claires - Céramiques artisanales"
+          />
+        </a>
+        <!-- Signature -->
+        <p class="header-signature">
+          Des objets du quotidien<br />
+          qui ont du sens.
+        </p>
+        <!-- =================================================
+             ACTIONS UTILISATEUR
+        ================================================== -->
+        <nav class="header-actions" aria-label="Actions utilisateur">
+          <ul>
+            <!-- Recherche -->
+            <li>
+              <a href="#" aria-label="Rechercher">
+                <img src="icons/search.svg" alt="" aria-hidden="true" />
+              </a>
+            </li>
+            <!-- Compte utilisateur -->
+            <li>
+              <a href="#" aria-label="Accéder à mon compte">
+                <img src="icons/user.svg" alt="" aria-hidden="true" />
+              </a>
+            </li>
+            <!-- Panier -->
+            <li>
+              <a href="#" aria-label="Voir mon panier">
+                <img src="icons/shopping-bag.svg" alt="" aria-hidden="true" />
+              </a>
+            </li>
+            <!-- =============================================
+                 BURGER MOBILE
+                 Masqué sur desktop
+            ============================================== -->
+            <li class="menu-toggle">
+              <button
+                type="button"
+                aria-label="Ouvrir le menu"
+                aria-expanded="false"
+                aria-controls="navigation-principale"
+              >
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- ===================================================
+           NAVIGATION PRINCIPALE
+      ==================================================== -->
+      <nav
+        id="navigation-principale"
+        class="main-navigation"
+        aria-label="Navigation principale"
+      >
+        <ul>
+          <li>
+            <a href="index.html"> Accueil </a>
+          </li>
+
+          <li>
+            <a href="index.html" aria-current="page"> Collections </a>
+          </li>
+
+          <li>
+            <a href="a-propos.html"> À propos </a>
+          </li>
+
+          <li>
+            <a href="contact.html"> Contact </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- =====================================================
+         CONTENU PRINCIPAL
+    ====================================================== -->
+    <main>
+      <!-- ===================================================
+           HERO / PRÉSENTATION COLLECTION
+      ==================================================== -->
+      <section class="collection-hero" aria-labelledby="collection-title">
+        <!-- Contenu du hero -->
+        <div class="collection-hero-content">
+          <p class="collection-label">Notre collection</p>
+          <h1 id="collection-title">Nos bols</h1>
+          <p class="collection-description">
+            Des bols uniques, façonnés à la main dans notre atelier en France.
+            Des pièces durables, pour un quotidien plus simple et plus beau.
+          </p>
+          <a href="#produits" class="button button-primary">
+            Découvrir la collection
+          </a>
+        </div>
+        <!-- Image hero -->
+        <figure class="collection-hero-image">
+          <img
+            src="images/decouvrir-collection.png"
+            alt="Collection de bols artisanaux en céramique dans un décor naturel"
+          />
+        </figure>
+      </section>
+      <!-- ===================================================
+           PRODUITS
+      ==================================================== -->
+      <section
+        id="produits"
+        class="products-section"
+        aria-labelledby="products-title"
+      >
+        <h2 id="products-title">Nos produits</h2>
+        <div class="products-grid">
+          <!-- =================================================
+               PRODUIT 1
+          ================================================== -->
+          <article class="product-card">
+            <figure>
+              <img
+                src="images/bol-bleu-beige.png"
+                alt="Bol artisanal en grès bleu et beige"
+              />
+            </figure>
+            <h3>Bol en grès bleu</h3>
+            <p class="product-price">35 €</p>
+            <a
+              href="product.html"
+              class="button button-product"
+              aria-label="Voir le produit Bol en grès bleu"
+            >
+              Voir le produit
+            </a>
+          </article>
+          <!-- =================================================
+               PRODUIT 2
+          ================================================== -->
+          <article class="product-card">
+            <figure>
+              <img
+                src="images/bol-blanc-mouchete.png"
+                alt="Bol artisanal en grès blanc moucheté"
+              />
+            </figure>
+            <h3>Bol en grès blanc</h3>
+            <p class="product-price">32 €</p>
+            <a
+              href="#"
+              class="button button-product"
+              aria-label="Voir le produit Bol en grès blanc"
+            >
+              Voir le produit
+            </a>
+          </article>
+          <!-- =================================================
+               PRODUIT 3
+          ================================================== -->
+          <article class="product-card">
+            <figure>
+              <img
+                src="images/bol-vert-beige.png"
+                alt="Bol artisanal émaillé vert et beige"
+              />
+            </figure>
+            <h3>Bol émaillé vert</h3>
+            <p class="product-price">38 €</p>
+            <a
+              href="#"
+              class="button button-product"
+              aria-label="Voir le produit Bol émaillé vert"
+            >
+              Voir le produit
+            </a>
+          </article>
+        </div>
+      </section>
+      <!-- ===================================================
+           INFORMATION LIVRAISON
+      ==================================================== -->
+      <aside class="delivery-info" aria-labelledby="livraison-titre">
+        <!-- Icône -->
+        <img
+          class="delivery-icon"
+          src="icons/truck-delivery.svg"
+          alt=""
+          aria-hidden="true"
+        />
+        <!-- Texte -->
+        <div class="delivery-content">
+          <h2 id="livraison-titre">Livraison offerte dès 60 €</h2>
+          <p>En France métropolitaine. Expédition sous 48 h.</p>
+        </div>
+      </aside>
+    </main>
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+    <footer class="site-footer">
+      <!-- ===================================================
+           PARTIE PRINCIPALE FOOTER
+      ==================================================== -->
+      <div class="footer-main">
+        <!-- =================================================
+             1. IDENTITÉ
+        ================================================== -->
+        <div class="footer-brand">
+          <a
+            href="index.html"
+            aria-label="Retour à l'accueil - Atelier Terres Claires"
+          >
+            <img
+              src="images/logo-detoure.png"
+              alt="Atelier Terres Claires - Céramiques artisanales"
+            />
+          </a>
+        </div>
+        <!-- =================================================
+             2. NAVIGATION
+        ================================================== -->
+        <nav class="footer-navigation" aria-label="Navigation du pied de page">
+          <h2>Navigation</h2>
+          <ul>
+            <li>
+              <a href="index.html"> Accueil </a>
+            </li>
+
+            <li>
+              <a href="index.html"> Collections </a>
+            </li>
+
+            <li>
+              <a href="a-propos.html"> À propos </a>
+            </li>
+
+            <li>
+              <a href="contact.html"> Contact </a>
+            </li>
+          </ul>
+        </nav>
+        <!-- =================================================
+             3. INFOS
+        ================================================== -->
+        <nav
+          class="footer-information"
+          aria-label="Informations légales et pratiques"
+        >
+          <h2>Informations</h2>
+          <ul>
+            <li>
+              <a href="#"> Livraison </a>
+            </li>
+
+            <li>
+              <a href="#"> Retours </a>
+            </li>
+
+            <li>
+              <a href="#"> Mentions légales </a>
+            </li>
+
+            <li>
+              <a href="#"> Politique de confidentialité </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- =================================================
+             4. RS
+        ================================================== -->
+        <div class="footer-social">
+          <h2>Suivez-nous</h2>
+          <ul>
+            <!-- Instagram -->
+            <li>
+              <a href="#" aria-label="Instagram">
+                <img
+                  src="icons/brand-instagram.svg"
+                  alt=""
+                  aria-hidden="true"
+                />
+              </a>
+            </li>
+            <!-- Facebook -->
+            <li>
+              <a href="#" aria-label="Facebook">
+                <img src="icons/brand-facebook.svg" alt="" aria-hidden="true" />
+              </a>
+            </li>
+            <!-- Pinterest -->
+            <li>
+              <a href="#" aria-label="Pinterest">
+                <img
+                  src="icons/brand-pinterest.svg"
+                  alt=""
+                  aria-hidden="true"
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ===================================================
+           PARTIE INFÉRIEURE FOOTER
+      ==================================================== -->
+      <div class="footer-bottom">
+        <!-- Copyright -->
+        <p class="footer-copyright">
+          © 2024 Atelier Terres Claires. Tous droits réservés.
+        </p>
+        <!-- Signature -->
+        <p class="footer-signature">Des objets du quotidien qui ont du sens.</p>
+      </div>
+    </footer>
+  </body>
+</html>

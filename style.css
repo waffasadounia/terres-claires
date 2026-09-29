@@ -1,0 +1,1325 @@
+/* ==========================================================
+   ATELIER TERRES CLAIRES
+   Desktop + Mobile ≤ 650 px
+========================================================== */
+
+/* ==========================================================
+   1. VARIABLES
+========================================================== */
+
+:root {
+  --vert-fonce: #0d382f;
+  --vert-clair: #e4eee7;
+  --terracotta: #c94f35;
+  --terracotta-hover: #ad402d;
+  --blanc-casse: #fffdf9;
+  --hero-bg: #faf8f4;
+  --beige-footer: #f7f2eb;
+  --texte: #18352f;
+  --texte-secondaire: #555b56;
+  --bordure: #e4e1db;
+  --largeur-contenu: 1160px;
+}
+/* ==========================================================
+   2. BASE / RESET
+========================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--blanc-casse);
+  color: var(--texte);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+figure,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ==========================================================
+   3. ACCESSIBILITÉ
+========================================================== */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--terracotta);
+  outline-offset: 3px;
+}
+
+/* ==========================================================
+   4. HEADER
+========================================================== */
+.site-header {
+  width: 100%;
+  background: var(--blanc-casse);
+}
+
+.header-top {
+  width: 100%;
+  max-width: var(--largeur-contenu);
+  min-height: 112px;
+  margin: 0 auto;
+  padding: 10px 0;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 70px;
+}
+
+/* Logo */
+.header-logo {
+  display: block;
+  width: 340px;
+  max-width: 100%;
+}
+
+.header-logo img {
+  width: 100%;
+  height: auto;
+}
+
+/* Signature */
+
+.header-signature {
+  color: var(--texte-secondaire);
+  font-size: 15px;
+  font-style: italic;
+  line-height: 1.25;
+  white-space: nowrap;
+}
+
+/* ==========================================================
+   5. ACTIONS HEADER
+========================================================== */
+
+.header-actions ul {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.header-actions li:not(.menu-toggle) {
+  display: flex;
+  align-items: center;
+}
+
+.header-actions a {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-actions img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+}
+
+/* ==========================================================
+   6. BURGER
+========================================================== */
+
+/* Caché sur desktop */
+
+.header-actions .menu-toggle {
+  display: none !important;
+}
+
+.menu-toggle button {
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  padding: 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--vert-fonce);
+}
+
+/* ==========================================================
+   7. NAVIGATION PRINCIPALE
+========================================================== */
+
+.main-navigation {
+  width: 100%;
+  background: var(--vert-clair);
+}
+
+.main-navigation ul {
+  width: 100%;
+  max-width: var(--largeur-contenu);
+  height: 56px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 44px;
+}
+
+.main-navigation li {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.main-navigation a {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+
+.main-navigation a[aria-current="page"]::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  left: 0;
+  height: 2px;
+  background: var(--vert-fonce);
+}
+
+/* ==========================================================
+   8. CONTENU PRINCIPAL
+========================================================== */
+
+main {
+  width: 100%;
+  max-width: var(--largeur-contenu);
+  margin: 0 auto;
+  padding: 12px 0 16px;
+}
+
+/* ==========================================================
+   9. HERO
+========================================================== */
+
+.collection-hero {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  display: grid;
+  grid-template-columns: 48% 52%;
+  overflow: hidden;
+  background: var(--hero-bg);
+  border-radius: 6px;
+}
+
+/* Contenu */
+
+.collection-hero-content {
+  position: relative;
+  z-index: 3;
+  padding: 36px 26px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background: var(--hero-bg);
+}
+
+.collection-label {
+  margin-bottom: 20px;
+  color: var(--terracotta);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.collection-hero h1 {
+  margin-bottom: 18px;
+  color: var(--vert-fonce);
+  font-size: 56px;
+  line-height: 1;
+}
+
+.collection-description {
+  max-width: 470px;
+  margin-bottom: 22px;
+  color: #31443f;
+  font-size: 16px;
+  line-height: 1.45;
+  text-align: justify;
+}
+
+/* Image */
+
+.collection-hero-image {
+  position: relative;
+  width: calc(100% + 2px);
+  height: 100%;
+  margin-left: -2px;
+  overflow: hidden;
+}
+
+.collection-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Fondu */
+.collection-hero-image::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 160px;
+  pointer-events: none;
+  background: linear-gradient(
+    to right,
+    var(--hero-bg) 0%,
+    rgba(250, 248, 244, 0.98) 8%,
+    rgba(250, 248, 244, 0.85) 25%,
+    rgba(250, 248, 244, 0.6) 45%,
+    rgba(250, 248, 244, 0.3) 68%,
+    rgba(250, 248, 244, 0.1) 85%,
+    transparent 100%
+  );
+}
+
+/* ==========================================================
+   10. BOUTONS
+========================================================== */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.button-primary,
+.button-product {
+  background: var(--terracotta);
+  color: #fff;
+}
+
+.button-primary {
+  min-width: 250px;
+  padding: 11px 24px;
+  font-size: 17px;
+}
+
+/* ==========================================================
+   11. PRODUITS
+========================================================== */
+
+.products-section {
+  padding-top: 20px;
+}
+
+.products-section > h2 {
+  margin-bottom: 10px;
+  color: var(--vert-fonce);
+  font-size: 34px;
+  line-height: 1.2;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+/* Carte */
+
+.product-card {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  background: var(--blanc-casse);
+  border: 1px solid var(--bordure);
+  border-radius: 6px;
+}
+
+.product-card figure {
+  width: 100%;
+  height: 175px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.product-card figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-card h3 {
+  margin: 0 6px 2px;
+  font-size: 19px;
+  line-height: 1.3;
+}
+
+.product-price {
+  margin: 0 6px 7px;
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+.button-product {
+  min-width: 185px;
+  margin: auto auto 0;
+  padding: 9px 24px;
+  font-size: 16px;
+}
+
+/* ==========================================================
+   12. LIVRAISON
+========================================================== */
+
+.delivery-info {
+  width: 100%;
+  margin-top: 26px;
+  padding: 17px 42px;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  background: var(--vert-clair);
+  border-radius: 6px;
+}
+
+.delivery-icon {
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.delivery-content h2 {
+  margin-bottom: 2px;
+  font-size: 21px;
+  line-height: 1.3;
+}
+
+.delivery-content p {
+  font-size: 16px;
+}
+/* ==========================================================
+   PAGE PRODUIT — DESKTOP
+========================================================== */
+
+.product-page {
+  width: 100%;
+  max-width: var(--largeur-contenu);
+  margin: 0 auto;
+  padding: 28px 0 16px;
+}
+
+/* Produit : image gauche / informations droite */
+
+.product-detail {
+  display: grid;
+  grid-template-columns: minmax(0, 56fr) minmax(0, 44fr);
+  gap: 48px;
+  align-items: start;
+}
+
+/* Image */
+
+.product-detail-image {
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.product-detail-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Informations */
+
+.product-detail-content {
+  padding-top: 2px;
+}
+
+.product-category {
+  margin-bottom: 14px;
+  color: var(--terracotta);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.product-detail-content h1 {
+  margin-bottom: 4px;
+  color: var(--vert-fonce);
+  font-size: 48px;
+  line-height: 1.1;
+}
+
+.product-detail-price {
+  margin-bottom: 18px;
+  color: var(--vert-fonce);
+  font-size: 30px;
+  line-height: 1.2;
+}
+
+.product-description {
+  margin-bottom: 28px;
+  color: #31443f;
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+/* Achat */
+
+.product-purchase {
+  display: grid;
+  grid-template-columns: 145px 1fr;
+  gap: 22px;
+  align-items: end;
+}
+
+.quantity-wrapper label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 15px;
+}
+
+.quantity-selector {
+  height: 48px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border: 1px solid var(--bordure);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.quantity-selector button,
+.quantity-selector input {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  background: var(--blanc-casse);
+  color: var(--vert-fonce);
+  border: 0;
+  font: inherit;
+  text-align: center;
+}
+
+.quantity-selector button {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.quantity-selector input {
+  border-right: 1px solid var(--bordure);
+  border-left: 1px solid var(--bordure);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* Retire les flèches natives du champ number */
+
+.quantity-selector input::-webkit-outer-spin-button,
+.quantity-selector input::-webkit-inner-spin-button {
+  margin: 0;
+  appearance: none;
+}
+
+.quantity-selector input[type="number"] {
+  appearance: textfield;
+}
+
+/* Bouton panier */
+
+.add-to-cart {
+  height: 48px;
+  padding: 0 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  background: var(--terracotta);
+  color: #fff;
+  border: 0;
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.add-to-cart img {
+  width: 25px;
+  height: 25px;
+  filter: brightness(0) invert(1);
+}
+
+/* Réassurance */
+
+.product-benefits {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.product-benefits li {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.25;
+}
+
+.product-benefits img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* Accessibilité */
+
+.add-to-cart:focus-visible,
+.quantity-selector button:focus-visible,
+.quantity-selector input:focus-visible {
+  outline: 3px solid var(--terracotta);
+  outline-offset: 3px;
+}
+/* ==========================================================
+   13. FOOTER
+========================================================== */
+
+.site-footer {
+  width: 100%;
+  padding: 28px max(16px, calc((100% - var(--largeur-contenu)) / 2)) 22px;
+  background: var(--beige-footer);
+}
+
+.footer-main {
+  width: 100%;
+  max-width: var(--largeur-contenu);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.7fr 1fr 1.2fr 1fr;
+  gap: 55px;
+  align-items: start;
+}
+
+/* Logo */
+
+.footer-brand img {
+  width: 220px;
+  height: auto;
+}
+
+/* Titres */
+.footer-main h2 {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: var(--vert-fonce);
+}
+
+/* Liens */
+
+.footer-main li {
+  margin-bottom: 2px;
+}
+
+.footer-main a {
+  font-size: 14px;
+  color: var(--vert-fonce);
+}
+
+/* Réseaux sociaux */
+
+.footer-social ul {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.footer-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-social img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+/* Bas du footer */
+
+.footer-bottom {
+  width: 100%;
+  max-width: var(--largeur-contenu);
+  margin: 28px auto 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-bottom p {
+  color: #676b68;
+  font-size: 12px;
+}
+
+.footer-signature {
+  font-style: italic;
+}
+
+/* ==========================================================
+   14. ÉTATS INTERACTIFS
+========================================================== */
+
+@media (hover: hover) {
+  .header-actions a:hover {
+    opacity: 0.7;
+  }
+
+  .main-navigation a:hover,
+  .footer-main nav a:hover {
+    text-decoration: underline;
+  }
+
+  .button:hover {
+    background: var(--terracotta-hover);
+  }
+}
+
+/* ==========================================================
+   15. RÉDUCTION DES ANIMATIONS
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ==========================================================
+   16. MOBILE — ≤ 650 px
+========================================================== */
+
+@media (max-width: 650px) {
+  /* ========================================================
+     HEADER
+  ======================================================== */
+
+  .header-top {
+    min-height: 86px;
+    padding: 12px 16px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .header-logo {
+    width: 185px;
+    max-width: 50%;
+  }
+
+  .header-signature {
+    display: none;
+  }
+
+  /* Actions */
+  .header-actions {
+    margin-left: auto;
+  }
+
+  .header-actions ul {
+    gap: 10px;
+  }
+
+  .header-actions a {
+    width: 44px;
+    height: 44px;
+  }
+
+  .header-actions img {
+    width: 21px;
+    height: 21px;
+  }
+
+  /* Burger */
+
+  .header-actions .menu-toggle {
+    display: flex !important;
+
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu-toggle button {
+    width: 44px;
+    height: 44px;
+    padding: 10px;
+    display: flex;
+  }
+
+  /* Navigation mobile fermée */
+  .main-navigation {
+    display: none;
+  }
+
+  /* Navigation mobile ouverte */
+  .main-navigation.is-open {
+    display: block;
+    background: var(--vert-clair);
+    border-top: 1px solid var(--bordure);
+  }
+
+  .main-navigation ul {
+    width: 100%;
+    height: auto;
+    padding: 8px 16px 12px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .main-navigation li {
+    width: 100%;
+    height: auto;
+  }
+
+  .main-navigation a {
+    width: 100%;
+    min-height: 30px;
+
+    display: flex;
+    align-items: center;
+
+    font-size: 15px;
+  }
+
+  .main-navigation li:last-child a {
+    border-bottom: 0;
+  }
+
+  .main-navigation a[aria-current="page"]::after {
+    bottom: 5px;
+    width: 70px;
+  }
+  /* ========================================================
+     MAIN
+  ======================================================== */
+  main {
+    max-width: none;
+    padding: 0 16px 20px;
+  }
+
+  /* ========================================================
+     HERO
+  ======================================================== */
+
+  .collection-hero {
+    width: calc(100% + 32px);
+    height: 230px;
+    margin-left: -16px;
+    display: block;
+    border-radius: 0;
+  }
+
+  .collection-hero-image {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+
+  .collection-hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 64% center;
+  }
+
+  .collection-hero-image::before {
+    inset: 0;
+    width: 78%;
+    height: 100%;
+
+    background: linear-gradient(
+      to right,
+      rgba(250, 248, 244, 1) 0%,
+      rgba(250, 248, 244, 0.99) 22%,
+      rgba(250, 248, 244, 0.92) 40%,
+      rgba(250, 248, 244, 0.72) 58%,
+      rgba(250, 248, 244, 0.42) 75%,
+      rgba(250, 248, 244, 0.15) 90%,
+      transparent 100%
+    );
+  }
+
+  /* Contenu hero */
+
+  .collection-hero-content {
+    width: 65%;
+    height: 100%;
+    padding: 16px 0 12px 18px;
+    justify-content: flex-start;
+    background: transparent;
+  }
+
+  .collection-label {
+    margin-bottom: 7px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    white-space: nowrap;
+  }
+
+  .collection-hero h1 {
+    margin-bottom: 9px;
+    font-size: 28px;
+    white-space: nowrap;
+  }
+
+  .collection-description {
+    width: 190px;
+    max-width: 100%;
+    margin-bottom: 11px;
+    font-size: 12px;
+    line-height: 1.4;
+    text-align: justify;
+  }
+
+  .button-primary {
+    min-width: 0;
+    padding: 9px 16px;
+    font-size: 13px;
+    white-space: nowrap;
+  }
+
+  /* ========================================================
+     PRODUITS
+  ======================================================== */
+  .products-section {
+    padding-top: 12px;
+  }
+
+  .products-section > h2 {
+    margin-bottom: 10px;
+    font-size: 23px;
+    line-height: 1.15;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  /* Carte horizontale */
+
+  .product-card {
+    min-height: 150px;
+    padding: 9px;
+    display: grid;
+    grid-template-columns: minmax(0, 46%) minmax(0, 54%);
+    grid-template-rows: auto auto 1fr;
+    column-gap: 10px;
+  }
+
+  .product-card figure {
+    height: 130px;
+    margin: 0;
+    grid-column: 1;
+    grid-row: 1 / 4;
+  }
+
+  .product-card h3 {
+    margin: 4px 0 2px;
+    grid-column: 2;
+    grid-row: 1;
+    font-size: 16px;
+  }
+
+  .product-price {
+    margin: 0;
+    grid-column: 2;
+    grid-row: 2;
+    font-size: 17px;
+  }
+
+  .button-product {
+    width: 100%;
+    min-width: 0;
+    margin: 8px 0 0;
+    padding: 9px 6px;
+    grid-column: 2;
+    grid-row: 3;
+    align-self: end;
+    font-size: 14px;
+  }
+
+  /* ========================================================
+     LIVRAISON
+  ======================================================== */
+
+  .delivery-info {
+    margin-top: 12px;
+    padding: 13px 15px;
+    gap: 14px;
+  }
+
+  .delivery-icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .delivery-content {
+    min-width: 0;
+  }
+
+  .delivery-content h2 {
+    margin-bottom: 3px;
+    font-size: 16px;
+    line-height: 1.25;
+  }
+
+  .delivery-content p {
+    font-size: 12px;
+    line-height: 1.35;
+  }
+
+  /* ========================================================
+     FOOTER
+  ======================================================== */
+
+  .site-footer {
+    padding: 22px 16px 16px;
+  }
+
+  .footer-main {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 22px 14px;
+    align-items: center;
+  }
+
+  /* Logo */
+
+  .footer-brand {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .footer-brand img {
+    width: 170px;
+  }
+
+  /* Réseaux sociaux */
+
+  .footer-social {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .footer-social h2 {
+    display: none;
+  }
+
+  .footer-social ul {
+    gap: 1px;
+  }
+
+  .footer-social a {
+    width: 44px;
+    height: 44px;
+  }
+
+  .footer-social img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .footer-social img[src*="pinterest"] {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Navigation footer */
+
+  .footer-navigation {
+    width: 100%;
+    padding: 0 60px;
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .footer-navigation h2 {
+    display: none;
+  }
+
+  .footer-navigation ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .footer-navigation li {
+    margin: 0;
+  }
+
+  .footer-navigation a {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  /* Informations secondaires masquées en mobile */
+  .footer-information {
+    display: none;
+  }
+
+  /* Bas du footer */
+  .footer-bottom {
+    margin-top: 12px;
+    padding-top: 14px;
+    justify-content: center;
+    border-top: 1px solid #d6d2cc;
+  }
+
+  .footer-copyright {
+    width: 100%;
+    font-size: 5px;
+    text-align: center;
+  }
+
+  .footer-signature {
+    display: none;
+  }
+  /* ========================================================
+   PAGE PRODUIT — MOBILE
+======================================================== */
+  .product-page {
+    width: 100%;
+    padding: 0 16px 8px;
+    overflow-x: hidden;
+  }
+
+  /* Produit */
+
+  .product-detail {
+    width: 100%;
+    margin: 0;
+    display: block;
+  }
+
+  /* Image produit */
+
+  .product-detail-image {
+    width: calc(100% + 32px);
+    height: 235px;
+    margin-left: -16px;
+    border-radius: 0;
+  }
+
+  .product-detail-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 55%;
+  }
+
+  /* Informations produit */
+
+  .product-detail-content {
+    width: 100%;
+    padding: 14px 0 0;
+  }
+
+  .product-category {
+    margin-bottom: 4px;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+  }
+
+  .product-detail-content h1 {
+    margin-bottom: 2px;
+    font-size: 27px;
+    line-height: 1.1;
+  }
+
+  .product-detail-price {
+    margin-bottom: 8px;
+    font-size: 23px;
+  }
+
+  .product-description {
+    margin-bottom: 14px;
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  /* Achat */
+
+  .product-purchase {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 14px;
+    align-items: end;
+  }
+
+  .quantity-wrapper label {
+    margin-bottom: 5px;
+    font-size: 13px;
+  }
+
+  .quantity-selector {
+    height: 42px;
+  }
+
+  .quantity-selector button {
+    font-size: 20px;
+  }
+
+  .quantity-selector input {
+    font-size: 16px;
+  }
+
+  .add-to-cart {
+    height: 42px;
+    padding: 0 12px;
+    gap: 7px;
+    font-size: 14px;
+  }
+
+  .add-to-cart img {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Réassurance */
+
+  .product-benefits {
+    margin-top: 18px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4px;
+  }
+
+  .product-benefits li {
+    gap: 4px;
+    font-size: 10px;
+    line-height: 1.2;
+  }
+
+  .product-benefits img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+  }
+  /* Livraison */
+
+  .product-page .delivery-info {
+    width: 100%;
+    margin-top: 16px;
+    padding: 10px 12px;
+  }
+  .product-page .delivery-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .product-page .delivery-content h2 {
+    font-size: 15px;
+  }
+
+  .product-page .delivery-content p {
+    font-size: 11px;
+  }
+/* ========================================================
+   FOOTER FICHE PRODUIT — MOBILE
+======================================================== */
+
+.product-body .site-footer {
+  margin-top: 12px;
+  padding: 0 16px;
+  background: var(--blanc-casse);
+}
+
+.product-body .footer-main {
+  display: none;
+}
+
+.product-body .footer-bottom {
+  width: 100%;
+  margin: 0;
+  padding: 12px 0 16px;
+
+  display: flex;
+  justify-content: center;
+
+  border-top: 1px solid var(--bordure);
+}
+
+.product-body .footer-bottom p:first-child {
+  margin: 0;
+
+  font-size: 11px;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.product-body .footer-bottom p:last-child {
+  display: none;
+}
+}
