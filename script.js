@@ -1,34 +1,67 @@
-const menuButton = document.querySelector(".menu-toggle button");
-const navigation = document.querySelector("#navigation-principale");
+// ==========================================================
+// ATELIER TERRES CLAIRES
+// JavaScript
+// ==========================================================
 
-function closeMenu() {
-  navigation.classList.remove("is-open");
-  menuButton.setAttribute("aria-expanded", "false");
-  menuButton.setAttribute("aria-label", "Ouvrir le menu");
+// ==========================================================
+// MENU BURGER MOBILE
+// ==========================================================
+
+const menuButton = document.querySelector(".menu-toggle button");
+const mainNavigation = document.querySelector(".main-navigation");
+
+if (menuButton && mainNavigation) {
+  // OUVERTURE / FERMETURE AU CLIC
+  menuButton.addEventListener("click", function () {
+    mainNavigation.classList.toggle("is-open");
+
+    const menuIsOpen = mainNavigation.classList.contains("is-open");
+
+    menuButton.setAttribute("aria-expanded", menuIsOpen);
+
+    menuButton.setAttribute(
+      "aria-label",
+      menuIsOpen ? "Fermer le menu" : "Ouvrir le menu",
+    );
+  });
+
+  // FERMETURE AVEC LA TOUCHE ÉCHAP
+  document.addEventListener("keydown", function (event) {
+    if (
+      event.key === "Escape" &&
+      mainNavigation.classList.contains("is-open")
+    ) {
+      mainNavigation.classList.remove("is-open");
+
+      menuButton.setAttribute("aria-expanded", "false");
+      menuButton.setAttribute("aria-label", "Ouvrir le menu");
+
+      // Replace le focus sur le bouton burger
+      menuButton.focus();
+    }
+  });
 }
 
-menuButton.addEventListener("click", function () {
-  navigation.classList.toggle("is-open");
+// ==========================================================
+// SÉLECTEUR DE QUANTITÉ - FICHE PRODUIT
+// ==========================================================
 
-  const menuIsOpen = navigation.classList.contains("is-open");
+const quantityMinus = document.querySelector(".quantity-minus");
+const quantityPlus = document.querySelector(".quantity-plus");
+const quantityInput = document.querySelector("#quantity");
 
-  menuButton.setAttribute("aria-expanded", menuIsOpen);
-  menuButton.setAttribute(
-    "aria-label",
-    menuIsOpen ? "Fermer le menu" : "Ouvrir le menu"
-  );
-});
-
-const menuLinks = navigation.querySelectorAll("a");
-
-menuLinks.forEach(function (link) {
-  link.addEventListener("click", function () {
-    closeMenu();
+if (quantityMinus && quantityPlus && quantityInput) {
+  // AUGMENTER LA QUANTITÉ
+  quantityPlus.addEventListener("click", function () {
+    quantityInput.value = Number(quantityInput.value) + 1;
   });
-});
 
-document.addEventListener("keydown", function (event) {
-  if (event.key === "Escape") {
-    closeMenu();
-  }
-});
+  // DIMINUER LA QUANTITÉ
+  quantityMinus.addEventListener("click", function () {
+    const quantity = Number(quantityInput.value);
+
+    if (quantity > 1) {
+      quantityInput.value = quantity - 1;
+    }
+  });
+}
